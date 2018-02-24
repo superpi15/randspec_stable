@@ -4,3 +4,5 @@ Generate an incomplete spec. in which each don’t-care entry has the same bit p
 3) Perform random shuffle on output side of cared entries.
 
 
+Compile:
+g++ --std=c++11 main.cpp
