@@ -31,14 +31,14 @@ INC=10
 PERCENT=$INC
 for COUNTER in $(seq ${INC} 100)
 do
+	for ID in $( seq $ID_BEGIN $END );
+	do
+		#echo "$ID"
+		./$PROGRAM $POWER $PERCENT ${DIR}/${ID}_p
+	done
 	echo $PERCENT
 	PERCENT=$(( $PERCENT + $INC ))
 	if [ "$PERCENT" -gt 100 ];
 		then break
 	fi
-	for ID in $( seq $ID_BEGIN $END );
-	do
-		#echo "$ID"
-		./$PROGRAM $POWER $PERCENT ${DIR}/${ID}_
-	done
 done

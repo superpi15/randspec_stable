@@ -1,0 +1,11 @@
+sh script/gen_range.sh [DIR] [ID_BEGIN] [FILE_NUM] [POWER]
+	1) Please run on previous directory level.
+	2) It generates {FILE_NUM} reversible spec in 2^{POWER} Boolean space. 
+	3) The number of care terms in each spec ranging from 0~100% of the 2^{POWER} space.
+	4) Parameter explanation:
+		DIR: where to put generated benchmarks.
+		ID_BEGIN: starting number of benchmarks.
+		FILE_NUM: how many test you want in this type of benchmark.
+		POWER: the resultant spec is 2^{POWER} truth table.
+
+
