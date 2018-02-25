@@ -6,6 +6,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <iomanip>
 #include <chrono>
 #include <random> //random engine
@@ -65,7 +66,9 @@ int main( int argc, char * argv[] ){
 
 	if( NameSeed ){
 		std::string FileName;
-		FileName = NameSeed;
+		std::ostringstream FileNameStream;
+		FileNameStream << NameSeed<< power<< '_'<< percent;
+		FileName = FileNameStream.str();
 		std::fstream FileCmp( FileName+ "_cmp.spec", std::ios::out );
 		std::fstream FileIncmp( FileName+ "_incmp.spec", std::ios::out );
 		//Complete Specified One
